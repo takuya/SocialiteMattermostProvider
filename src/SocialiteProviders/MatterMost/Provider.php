@@ -99,7 +99,7 @@ class Provider extends AbstractProvider implements ProviderInterface {
     $uri = $this->getConfig('instance_uri', null);
     if( ! $uri) {
       throw new \InvalidArgumentException(
-        'No space_uri. ENV['.self::IDENTIFIER.'_INSTANCE_URI]=https://mm.example.com/ must be provided.');
+        'No instance_uri. ENV['.self::IDENTIFIER.'_INSTANCE_URI]=https://mm.example.com/ must be provided.');
     }
 
     return $uri;

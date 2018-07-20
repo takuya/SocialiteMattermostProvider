@@ -1,6 +1,6 @@
 {
     "name": "socialiteproviders/mattermost",
-    "description": "Backlog OAuth2 Provider for Laravel Socialite",
+    "description": "Mattermost OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [{
         "name": "takuya",

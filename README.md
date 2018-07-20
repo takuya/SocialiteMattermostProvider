@@ -10,3 +10,35 @@ MATTERMOST_INSTANCE_URI=https://your-instance.mattermost.example/
 
 
 
+# install using composer
+```sh
+composer install 
+```
+### composer.json
+
+installing from github 
+
+```json
+"repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/takuya/SocialiteMattermostProvider"
+    }
+   ],
+"require": {
+"socialiteproviders/mattermost": "dev-master"
+}
+```
+
+## add reference to EventServiceProvider.php
+```php
+class EventServiceProvider extends ServiceProvider {
+
+  protected $listen = [
+    // add for login
+    \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+       'SocialiteProviders\\Mattermost\\MattermostExtendSocialite@handle',
+    ],
+  ];
+
+```
